@@ -1,0 +1,15 @@
+{
+    "name": "heo-m/serializer",
+    "description": "JSON Serialization library.",
+    "keywords": ["library", "serialization"],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=5.5.9",
+    },
+    "autoload": {
+        "psr-4": {
+            "HeoM\\Serializer\\": "src/"
+        }
+    }
+}
