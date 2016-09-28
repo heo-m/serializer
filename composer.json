@@ -1,9 +1,13 @@
 {
     "name": "heo-mic/serializer",
     "description": "JSON Serialization library.",
-    "keywords": ["library", "serialization"],
+    "keywords": [
+        "library",
+        "serialization"
+    ],
     "license": "MIT",
     "type": "library",
+    "version": "0.0.1",
     "require": {
         "php": ">=5.5.9"
     },
