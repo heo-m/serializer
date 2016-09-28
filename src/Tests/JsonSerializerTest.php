@@ -3,7 +3,7 @@
 namespace HeoMic\Serializer\Tests;
 
 use HeoMic\Serializer\JsonSerializer;
-use HeoMic\Serializer\Walker\FlexibleWalker;
+use HeoMic\Serializer\Walker\FlexWalker;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>
@@ -11,12 +11,12 @@ use HeoMic\Serializer\Walker\FlexibleWalker;
 class JsonSerializerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test serialization using FlexibleWalker.
+     * Test serialization using FlexWalker.
      */
     public function testFlexSerializer()
     {
         $serializer = new JsonSerializer();
-        $flexWalker = new FlexibleWalker();
+        $flexWalker = new FlexWalker();
 
         $testArr = [
             '{"foo":"bar"}' => (object) ['foo' => 'bar'],

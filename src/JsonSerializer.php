@@ -3,7 +3,7 @@
 namespace HeoMic\Serializer;
 
 use HeoMic\Serializer\Walker\WalkerInterface;
-use HeoMic\Serializer\Walker\FlexibleWalker;
+use HeoMic\Serializer\Walker\FlexWalker;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>
@@ -20,7 +20,7 @@ class JsonSerializer implements SerializerInterface
         $contents,
         WalkerInterface $walker = null
     ) {
-        $walker = $walker !== null ? $walker : new FlexibleWalker();
+        $walker = $walker !== null ? $walker : new FlexWalker();
 
         $convertedContents = $walker->walk($contents);
 

@@ -7,7 +7,7 @@ use HeoMic\Serializer\Node\NodeInterface;
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>
  */
-class FlexibleWalker extends AbstractWalker implements WalkerInterface
+class FlexWalker extends AbstractWalker implements WalkerInterface
 {
     /**
      * {@inheritdoc}
