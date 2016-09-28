@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     },
     watch: {
       phpdoc: {
-        files: ["src/*.*"],
+        files: ["src/**/*.*"],
         tasks: ["clean:phpdoc", "exec:phpdoc"],
         options: {
           debounceDelay: 5000
