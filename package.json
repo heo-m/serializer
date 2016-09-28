@@ -1,0 +1,16 @@
+{
+  "name": "heo-mic-serializer",
+  "description": "JSON Serialization library form PHP.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heo-mic/serializer.git"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": ">0.4.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1"
+  }
+}
