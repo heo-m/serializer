@@ -53,7 +53,8 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     exec: {
-      phpdoc: "./vendor/bin/phpdoc"
+      phpdoc: "./vendor/bin/phpdoc",
+      phpunit: "./vendor/bin/phpunit",
     },
     clean: {
       phpdoc: "doc/*"
@@ -74,18 +75,21 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
 
   grunt.registerTask("version-bump:patch", "Updates the package PATCH version", function () {
+    grunt.task.run("exec:phpunit");
     versionHandler.bumpInJsonFile("composer.json", 4, "patch");
     versionHandler.bumpInJsonFile("package.json", 2, "patch");
     grunt.task.run("phpdoc");
   });
 
   grunt.registerTask("version-bump:minor", "Updates the package MINOR version", function () {
+    grunt.task.run("exec:phpunit");
     versionHandler.bumpInJsonFile("composer.json", 4, "minor");
     versionHandler.bumpInJsonFile("package.json", 2, "minor");
     grunt.task.run("phpdoc");
   });
 
   grunt.registerTask("version-bump:major", "Updates the package MAJOR version", function () {
+    grunt.task.run("exec:phpunit");
     versionHandler.bumpInJsonFile("composer.json", 4, "major");
     versionHandler.bumpInJsonFile("package.json", 2, "major");
     grunt.task.run("phpdoc");
