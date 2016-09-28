@@ -11,5 +11,8 @@
         "psr-4": {
             "HeoMic\\Serializer\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*"
     }
 }
