@@ -53,16 +53,18 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     exec: {
-      phpdoc: "./vendor/bin/phpdoc",
-      phpunit: "./vendor/bin/phpunit",
+      doc: "./vendor/bin/phpdoc",
+      unit: "./vendor/bin/phpunit",
+      sniff: "./vendor/bin/phpcs --standard=vendor/escapestudios/symfony2-coding-standard/Symfony2/ src",
+      dumpAutoload: "composer dump-autoload"
     },
     clean: {
-      phpdoc: "doc/*"
+      doc: "doc/*"
     },
     watch: {
       phpdoc: {
         files: ["src/**/*.*"],
-        tasks: ["clean:phpdoc", "exec:phpdoc"],
+        tasks: ["clean:doc", "exec:doc"],
         options: {
           debounceDelay: 5000
         }
@@ -74,27 +76,29 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-watch");
 
+  grunt.registerTask("test", ["exec:dumpAutoload", "exec:sniff", "exec:unit"]);
+
   grunt.registerTask("version-bump:patch", "Updates the package PATCH version", function () {
-    grunt.task.run("exec:phpunit");
+    grunt.task.run("test");
     versionHandler.bumpInJsonFile("composer.json", 4, "patch");
     versionHandler.bumpInJsonFile("package.json", 2, "patch");
     grunt.task.run("phpdoc");
   });
 
   grunt.registerTask("version-bump:minor", "Updates the package MINOR version", function () {
-    grunt.task.run("exec:phpunit");
+    grunt.task.run("test");
     versionHandler.bumpInJsonFile("composer.json", 4, "minor");
     versionHandler.bumpInJsonFile("package.json", 2, "minor");
-    grunt.task.run("phpdoc");
+    grunt.task.run("doc");
   });
 
   grunt.registerTask("version-bump:major", "Updates the package MAJOR version", function () {
-    grunt.task.run("exec:phpunit");
+    grunt.task.run("test");
     versionHandler.bumpInJsonFile("composer.json", 4, "major");
     versionHandler.bumpInJsonFile("package.json", 2, "major");
-    grunt.task.run("phpdoc");
+    grunt.task.run("doc");
   });
 
-  grunt.registerTask("phpdoc", ["clean:phpdoc", "exec:phpdoc"]);
+  grunt.registerTask("doc", ["clean:doc", "exec:doc"]);
   grunt.registerTask("default", ["phpdoc"]);
 }
