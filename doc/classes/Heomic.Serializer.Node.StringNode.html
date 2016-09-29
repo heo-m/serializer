@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    Serializer &raquo; \HeoMic\Serializer\Node\ArrayNode
+    <title>    Serializer &raquo; \Heomic\Serializer\Node\StringNode
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -43,7 +43,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/HeoMic.html">HeoMic</a></li>
+                                                                        <li><a href="../namespaces/Heomic.html">Heomic</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -125,12 +125,6 @@
         </a>
     </li>
 
-                                                                                                        <li class="method public">
-        <a href="#method_getChildNodes" title="getChildNodes :: ">
-            <span class="description"></span><pre>getChildNodes</pre>
-        </a>
-    </li>
-
                                                                                                         <li class="method public inherited">
         <a href="#method_getFormatter" title="getFormatter :: ">
             <span class="description"></span><pre>getFormatter</pre>
@@ -144,14 +138,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_handleValue" title="handleValue :: {@inheritdoc}">
-            <span class="description">{@inheritdoc}</span><pre>handleValue</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_setChildNodes" title="setChildNodes :: ">
-            <span class="description"></span><pre>setChildNodes</pre>
+        <a href="#method_handleValue" title="handleValue :: ">
+            <span class="description"></span><pre>handleValue</pre>
         </a>
     </li>
 
@@ -171,11 +159,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -189,9 +177,9 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>ArrayNode</h1>
+                <h1>StringNode</h1>
                 <small style="display: block; text-align: right">
-                                            Extends <a href="../classes/HeoMic.Serializer.Node.AbstractNode.html">\HeoMic\Serializer\Node\AbstractNode</a>
+                                            Extends <a href="../classes/Heomic.Serializer.Node.AbstractNode.html">\Heomic\Serializer\Node\AbstractNode</a>
                                                         </small>
                 <p class="short_description"></p>
                 <div class="details">
@@ -259,39 +247,10 @@
                             </div>
 
                         </div>
-                                            <a id="method_getChildNodes"></a>
-                        <div class="element clickable method public  method_getChildNodes" data-toggle="collapse" data-target=".method_getChildNodes .collapse">
-                            <h2>getChildNodes</h2>
-                            <pre>getChildNodes() : array</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                                                    </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>array</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
                                             <a id="method_getFormatter"></a>
                         <div class="element clickable method public  method_getFormatter inherited" data-toggle="collapse" data-target=".method_getFormatter .collapse">
                             <h2>getFormatter</h2>
-                            <pre>getFormatter() : \HeoMic\Serializer\Formatter\FormatterInterface</pre>
+                            <pre>getFormatter() : \Heomic\Serializer\Formatter\FormatterInterface</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -312,7 +271,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/HeoMic.Serializer.Formatter.FormatterInterface.html">\HeoMic\Serializer\Formatter\FormatterInterface</a></code><p></p>
+                                        <code><a href="../classes/Heomic.Serializer.Formatter.FormatterInterface.html">\Heomic\Serializer\Formatter\FormatterInterface</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -348,8 +307,8 @@
                         </div>
                                             <a id="method_handleValue"></a>
                         <div class="element clickable method public  method_handleValue" data-toggle="collapse" data-target=".method_handleValue .collapse">
-                            <h2>{@inheritdoc}</h2>
-                            <pre>handleValue( $value) </pre>
+                            <h2>handleValue</h2>
+                            <pre>handleValue(mixed $value) : string|null</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -359,55 +318,16 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                     </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$value</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_setChildNodes"></a>
-                        <div class="element clickable method public  method_setChildNodes" data-toggle="collapse" data-target=".method_setChildNodes .collapse">
-                            <h2>setChildNodes</h2>
-                            <pre>setChildNodes(array $childNodes) : \HeoMic\Serializer\Node\ArrayNode</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                                                    </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$childNodes</h4>
-                                                <code>array</code><p></p>
+                                                <code>mixed</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/HeoMic.Serializer.Node.ArrayNode.html">\HeoMic\Serializer\Node\ArrayNode</a></code><p></p>
+                                        <code>string|null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -415,7 +335,7 @@
                                             <a id="method_setFormatter"></a>
                         <div class="element clickable method public  method_setFormatter inherited" data-toggle="collapse" data-target=".method_setFormatter .collapse">
                             <h2>setFormatter</h2>
-                            <pre>setFormatter(\HeoMic\Serializer\Formatter\FormatterInterface $formatter) : \HeoMic\Serializer\Node\AbstractNode</pre>
+                            <pre>setFormatter(\Heomic\Serializer\Formatter\FormatterInterface $formatter) : \Heomic\Serializer\Node\AbstractNode</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -430,11 +350,11 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$formatter</h4>
-                                                <code><a href="../classes/HeoMic.Serializer.Formatter.FormatterInterface.html">\HeoMic\Serializer\Formatter\FormatterInterface</a></code><p></p>
+                                                <code><a href="../classes/Heomic.Serializer.Formatter.FormatterInterface.html">\Heomic\Serializer\Formatter\FormatterInterface</a></code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/HeoMic.Serializer.Node.AbstractNode.html">\HeoMic\Serializer\Node\AbstractNode</a></code><p></p>
+                                        <code><a href="../classes/Heomic.Serializer.Node.AbstractNode.html">\Heomic\Serializer\Node\AbstractNode</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -442,7 +362,7 @@
                                             <a id="method_setIsNullable"></a>
                         <div class="element clickable method public  method_setIsNullable inherited" data-toggle="collapse" data-target=".method_setIsNullable .collapse">
                             <h2>setIsNullable</h2>
-                            <pre>setIsNullable(boolean $isNullable) : \HeoMic\Serializer\Node\AbstractNode</pre>
+                            <pre>setIsNullable(boolean $isNullable) : \Heomic\Serializer\Node\AbstractNode</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -461,7 +381,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/HeoMic.Serializer.Node.AbstractNode.html">\HeoMic\Serializer\Node\AbstractNode</a></code><p></p>
+                                        <code><a href="../classes/Heomic.Serializer.Node.AbstractNode.html">\Heomic\Serializer\Node\AbstractNode</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -469,36 +389,10 @@
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_childNodes"> </a>
-                            <div class="element clickable property  protected property_childNodes" data-toggle="collapse" data-target=".property_childNodes .collapse">
-                                <h2>childNodes</h2>
-                                <pre>childNodes : array</pre>
-                                <div class="labels">
-                                                                                                        </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
                                                     <a id="property_formatter"> </a>
                             <div class="element clickable property  protected property_formatter inherited" data-toggle="collapse" data-target=".property_formatter .collapse">
                                 <h2>formatter</h2>
-                                <pre>formatter : \HeoMic\Serializer\Formatter\FormatterInterface</pre>
+                                <pre>formatter : \Heomic\Serializer\Formatter\FormatterInterface</pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -517,7 +411,7 @@
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code><a href="../classes/HeoMic.Serializer.Formatter.FormatterInterface.html">\HeoMic\Serializer\Formatter\FormatterInterface</a></code>
+                                            <code><a href="../classes/Heomic.Serializer.Formatter.FormatterInterface.html">\Heomic\Serializer\Formatter\FormatterInterface</a></code>
                                                                             </div>
                                 </div>
                             </div>
@@ -549,14 +443,14 @@
                             </div>
                                                             </div>
             </div>
-            <a id="\HeoMic\Serializer\Node\ArrayNode"></a>
+            <a id="\Heomic\Serializer\Node\StringNode"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/HeoMic.Serializer.Node.html">Node</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Heomic.Serializer.Node.html">Node</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/HeoMic.Serializer.Node.ArrayNode.html">ArrayNode</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Heomic.Serializer.Node.StringNode.html">StringNode</a></li>
             </ul>
         </div>
     </div>
@@ -567,7 +461,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 28 Sep 2016 19:58:11 +0000.<br/>
+            generated on Thu, 29 Sep 2016 19:22:53 +0000.<br/>
     </footer>
     </body>
 </html>
