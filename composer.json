@@ -18,6 +18,7 @@
     },
     "require-dev": {
         "phpdocumentor/phpdocumentor": "2.*",
-        "phpunit/phpunit": "~4.8"
+        "phpunit/phpunit": "~4.8",
+        "squizlabs/php_codesniffer": "2.*"
     }
 }
