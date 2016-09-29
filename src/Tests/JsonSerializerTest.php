@@ -31,7 +31,7 @@ class JsonSerializerTest extends \PHPUnit_Framework_TestCase
             '[{"foo":1},{"bar":null}]' => [
                 (object) ['foo' => 1],
                 (object) ['bar' => null],
-            ]
+            ],
         ];
 
         foreach ($testArr as $expectedValue => $srcValue) {
