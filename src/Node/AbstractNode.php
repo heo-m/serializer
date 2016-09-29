@@ -1,8 +1,8 @@
 <?php
 
-namespace HeoMic\Serializer\Node;
+namespace Heomic\Serializer\Node;
 
-use HeoMic\Serializer\Formatter\FormatterInterface;
+use Heomic\Serializer\Formatter\FormatterInterface;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

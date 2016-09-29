@@ -1,6 +1,6 @@
 <?php
 
-namespace HeoMic\Serializer\Formatter;
+namespace Heomic\Serializer\Formatter;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

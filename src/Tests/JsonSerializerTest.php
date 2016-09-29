@@ -1,9 +1,9 @@
 <?php
 
-namespace HeoMic\Serializer\Tests;
+namespace Heomic\Serializer\Tests;
 
-use HeoMic\Serializer\JsonSerializer;
-use HeoMic\Serializer\Walker\FlexWalker;
+use Heomic\Serializer\JsonSerializer;
+use Heomic\Serializer\Walker\FlexWalker;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

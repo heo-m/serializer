@@ -1,9 +1,9 @@
 <?php
 
-namespace HeoMic\Serializer;
+namespace Heomic\Serializer;
 
-use HeoMic\Serializer\Walker\WalkerInterface;
-use HeoMic\Serializer\Walker\FlexWalker;
+use Heomic\Serializer\Walker\WalkerInterface;
+use Heomic\Serializer\Walker\FlexWalker;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

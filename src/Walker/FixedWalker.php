@@ -1,8 +1,8 @@
 <?php
 
-namespace HeoMic\Serializer\Walker;
+namespace Heomic\Serializer\Walker;
 
-use HeoMic\Serializer\Tree\TreeInterface;
+use Heomic\Serializer\Tree\TreeInterface;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

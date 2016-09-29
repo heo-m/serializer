@@ -1,8 +1,8 @@
 <?php
 
-namespace HeoMic\Serializer\Tests\Node;
+namespace Heomic\Serializer\Tests\Node;
 
-use HeoMic\Serializer\Node\FloatNode;
+use Heomic\Serializer\Node\FloatNode;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

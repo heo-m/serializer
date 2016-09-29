@@ -1,8 +1,8 @@
 <?php
 
-namespace HeoMic\Serializer\Walker;
+namespace Heomic\Serializer\Walker;
 
-use HeoMic\Serializer\Node\NodeInterface;
+use Heomic\Serializer\Node\NodeInterface;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>

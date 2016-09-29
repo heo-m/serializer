@@ -1,5 +1,5 @@
 {
-    "name": "heo-mic/serializer",
+    "name": "heomic/serializer",
     "description": "JSON Serialization library.",
     "keywords": [
         "library",
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "HeoMic\\Serializer\\": "src/"
+            "Heomic\\Serializer\\": "src/"
         }
     },
     "require-dev": {

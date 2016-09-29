@@ -1,9 +1,9 @@
 {
-  "name": "heo-mic-serializer",
+  "name": "heomic-serializer",
   "description": "JSON Serialization library form PHP.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heo-mic/serializer.git"
+    "url": "https://github.com/heomic/serializer.git"
   },
   "license": "MIT",
   "version": "0.0.1",

@@ -1,6 +1,6 @@
 <?php
 
-namespace HeoMic\Serializer\Walker;
+namespace Heomic\Serializer\Walker;
 
 /**
  * @author Michał Hepner <michal.hepner@gmail.com>
