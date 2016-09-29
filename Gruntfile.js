@@ -100,5 +100,5 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("doc", ["clean:doc", "exec:doc"]);
-  grunt.registerTask("default", ["phpdoc"]);
+  grunt.registerTask("default", ["test", "doc"]);
 }
