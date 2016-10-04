@@ -1,50 +1,32 @@
 module.exports = function (grunt) {
 
   versionHandler = {
-    parseVersionString: function (versionString) {
-      return versionString.split(".");
+    updateComposerJson: function (versionString) {
+        return versionHandler.setVersionInJsonFile(versionString, "composer.json", 4, "version");
     },
-    bumpPatchVersion: function (versionString) {
-      parts = versionHandler.parseVersionString(versionString);
-      parts[2] = parseInt(parts[2]) + 1;
-
-      return parts.join(".");
+    updatePackageJson: function (versionString) {
+        return versionHandler.setVersionInJsonFile(versionString, "package.json", 2, "version");
     },
-    bumpMinorVersion: function (versionString) {
-      parts = versionHandler.parseVersionString(versionString);
-      parts[1] = parseInt(parts[1]) + 1;
-      parts[2] = 0;
-
-      return parts.join(".");
+    validateVersionString: function (versionString) {
+        return (typeof versionString === 'string' || versionString instanceof String) && versionString.length > 0;
     },
-    bumpMajorVersion: function (versionString) {
-        parts = versionHandler.parseVersionString(versionString);
-        parts[0] = parseInt(parts[0]) + 1;
-        parts[1] = 0;
-        parts[2] = 0;
-
-        return parts.join(".");
-    },
-    bumpInJsonFile: function (fileName, indentation, versionType) {
-      if (grunt.file.exists(fileName)) {
-        jsonContents = grunt.file.readJSON(fileName);
-        switch (versionType) {
-          case "patch":
-            jsonContents.version = versionHandler.bumpPatchVersion(jsonContents.version);
-            break;
-          case "minor":
-            jsonContents.version = versionHandler.bumpMinorVersion(jsonContents.version);
-            break;
-          case "major":
-            jsonContents.version = versionHandler.bumpMajorVersion(jsonContents.version);
-            break;
-          default:
-            grunt.log.error("Invalid bump type " + versionType + ".");
+    setVersionInJsonFile: function (versionString, fileName, indentationSize, versionObjectKey) {
+      if (versionHandler.validateVersionString(versionString)) {
+        if (grunt.file.exists(fileName)) {
+          jsonContents = grunt.file.readJSON(fileName);
+          if (typeof jsonContents[versionObjectKey] !== "undefined") {
+            jsonContents[versionObjectKey] = versionString;
+            grunt.file.write(fileName, JSON.stringify(jsonContents, null, indentationSize));
+          } else {
+            grunt.log.error("Key " + versionObjectKey + " in file " + fileName + " was not found.");
             return 255;
+          }
+        } else {
+          grunt.log.error("File " + fileName + " was not found.");
+          return 255;
         }
-        grunt.file.write(fileName, JSON.stringify(jsonContents, null, indentation));
       } else {
-        grunt.log.error("File " + fileName + " was not found.");
+        grunt.log.error("Provided version " + versionString + " is invalid.");
         return 255;
       }
     }
@@ -78,24 +60,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask("test", ["exec:dumpAutoload", "exec:sniff", "exec:unit"]);
 
-  grunt.registerTask("version-bump:patch", "Updates the package PATCH version", function () {
+  grunt.registerTask("version", "Updates the version of the package.", function () {
     grunt.task.run("test");
-    versionHandler.bumpInJsonFile("composer.json", 4, "patch");
-    versionHandler.bumpInJsonFile("package.json", 2, "patch");
-    grunt.task.run("phpdoc");
-  });
-
-  grunt.registerTask("version-bump:minor", "Updates the package MINOR version", function () {
-    grunt.task.run("test");
-    versionHandler.bumpInJsonFile("composer.json", 4, "minor");
-    versionHandler.bumpInJsonFile("package.json", 2, "minor");
-    grunt.task.run("doc");
-  });
-
-  grunt.registerTask("version-bump:major", "Updates the package MAJOR version", function () {
-    grunt.task.run("test");
-    versionHandler.bumpInJsonFile("composer.json", 4, "major");
-    versionHandler.bumpInJsonFile("package.json", 2, "major");
+    versionString = grunt.option("set");
+    if (versionHandler.updateComposerJson(versionString) || versionHandler.updatePackageJson(versionString)) {
+      grunt.fail.warn("Version can't be updated.")
+    }
     grunt.task.run("doc");
   });
 
